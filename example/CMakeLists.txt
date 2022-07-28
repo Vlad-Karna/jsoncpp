@@ -21,7 +21,7 @@ endif()
 foreach(example ${EXAMPLES})
     add_executable(${example} ${example}/${example}.cpp)
     target_include_directories(${example} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-    target_link_libraries(${example} jsoncpp_lib)
+    target_link_libraries(${example} jsoncpp_static)
 endforeach()
 
 add_custom_target(examples ALL DEPENDS ${EXAMPLES})
