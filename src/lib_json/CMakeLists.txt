@@ -149,6 +149,8 @@ if(BUILD_STATIC_LIBS)
         else()
             set(STATIC_SUFFIX "")
         endif()
+    else()
+        set(STATIC_SUFFIX "_static")
     endif()
 
     set_target_properties(${STATIC_LIB} PROPERTIES
